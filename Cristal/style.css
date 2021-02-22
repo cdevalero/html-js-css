@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: rgba(46, 9, 79, 0.461);
+    
+}
+
+/* vh significa 1/100 la altura del monito es decir si el monitor mide 900px -> 1vh == 9px*/
+/* Existe wh para medir la anchura del monito  (h: height; w: width; v:view*/
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+
+    display: flex;              /* Hace funcionar las dos lineas siguientes */
+    align-items: center;        /* Coloca el objeto en el centro Verticalemente */
+    justify-content: center;    /* Coloca el objeto en el centro Horizontalmente */
+}
+
+a {
+    text-decoration: none;
+}
+
+.glass {
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255,0.7), 
+        rgba(255,255,255,0.3)
+    );
+    backdrop-filter: blur(1.5rem);
+    border-radius: 0.5rem;
+    z-index: 2;                 /* Entre mas grande el numero mas lejos del fondo */
+    display: flex;              /* Flex lo que hace es que todo lo que este adentro va a pasar de vertical a horizontal*/
+}
+
+.circle1, .circle2 {
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255,0.8), 
+        rgba(255,255,255,0.3)
+    );
+    height: 15rem;
+    width: 15rem;
+    border-radius: 100%;
+    position: absolute;     /* Esto hace que podamos colocar el objeto en la posicion XY que querramos*/
+}
+
+.circle1 {
+    top: 5%;
+    right: 10%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+
+/* --------------- DASHBOARD ---------------- */
+
+.dashboad {
+    color: rgba(46, 9, 79, 0.605);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255,0.7), 
+        rgba(255,255,255,0.3)
+    );
+    border-radius: 0.5rem;
+}
+
+/* ---- USER ----- */
+
+.user {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.user h2 {
+    font-size: 1.2rem;
+}
+
+.user p {
+    font-size: 0.8rem;
+}
+
+.user img {
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+
+/* ---- LINK ----- */
+
+.link {
+    display: flex;
+    margin: 1rem 0;
+    padding: 0.5rem 2.5rem;
+    align-items:center;
+}
+
+.link h3 {
+    color: #426696;
+    opacity: 0.6;
+    font-weight: 700;
+    padding-left: 1rem;
+    font-size: 28px;
+}
+
+.link img{
+    width: 32px;
+}
+
+/* ---- CONTACT ----- */
+
+.contact {
+    color: rgba(46, 9, 79, 0.502);
+    text-align: left;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.contact h4 {
+    font-size: 14px;
+    margin-top: 0.5rem;
+    
+}
+
+/* --------------- LANGUAGES ---------------- */
+
+.languages {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3rem;
+}
+
+.status{
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.status h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right top, #2a3f6cb3, #89aecb);
+    -webkit-background-clip: text;                                      /* Esto ancla el fondo al texto */
+    -webkit-text-fill-color: transparent;                               /* Esto hace que el texto sea transparente para poder ver el fondo*/
+
+}
+
+/* ---- CARD ----- */
+
+.card img{
+    width: 3rem;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(to right top, rgba(255,255,255,0.5), rgba(255,255,255,0.3));
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+    justify-content: space-between;
+}
+
+/* ---- PROGRESS ----- */
+
+.progress--js, .progress--css, .progress--html {
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    border-radius: 2rem;
+    width: 8rem;
+    height: 25%;
+    margin-top: 0.8rem;
+    margin-bottom: 0.1rem;
+    position: relative;                 /* Esto lo que hace es que un objeto absoluto este dentro de este objeto*/
+}
+
+.progress--html::after {                /* Esto lo que hace es generar un estilo adicional despues de generar el original/estandar */
+    content: "";                        /* Esto es obligatorio para que funcione */
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background: #426696ae;
+    border-radius: 2rem;
+}
+
+.progress--js::after {                
+    content: "";                        
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background: #426696ae;
+    border-radius: 2rem;
+}
+
+.progress--css::after {                
+    content: "";                        
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #426696ae;
+    border-radius: 2rem;
+}
+
+
+@media (max-width: 700px){
+    * {
+        font-size: 14px;
+    }
+}
+
+
+/* ------------------- MOVIL ---------------- */
+
+@media (max-width: 600px){
+    .glass{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 1rem;
+    }
+
+    .user {
+        margin-top: 1.5rem;
+    }
+    
+    .user h2 {
+        font-size: 2.3rem;
+    }
+    
+    .user p {
+        font-size: 1.5rem;
+    }
+    
+    .user img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .links {
+        display: flex;
+    }
+    
+    .link h3 {
+        display: none;
+    }
+    
+    .link img{
+        width: 32px;
+    }
+    
+    .contact h4 {
+        font-size: 14px;
+    }
+    .contact h3 {
+        font-size: 18px;
+    }
+
+    .languages {
+        margin-bottom: 5rem;
+    }
+
+    .status h1{
+        text-align: center;
+    }
+    
+    .card img{
+        width: 5rem;
+    }
+    
+    .card h3{
+        font-size: 16px
+    }
+    .porcentage{
+        padding-top: 1.2rem;
+        padding-right: 0.5rem;
+    }
+
+}
