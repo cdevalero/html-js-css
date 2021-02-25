@@ -12,8 +12,9 @@
 
 main {
     min-height: 100vh;
+    
     background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-
+    
     display: flex;              /* Hace funcionar las dos lineas siguientes */
     align-items: center;        /* Coloca el objeto en el centro Verticalemente */
     justify-content: center;    /* Coloca el objeto en el centro Horizontalmente */
@@ -49,13 +50,25 @@ a {
 
 .circle1 {
     top: 5%;
-    right: 10%;
+    right: 15%;
 }
 
 .circle2 {
     bottom: 5%;
-    left: 10%;
+    left: 15%;
 }
+
+.tema{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    display: none;
+}
+
+.tema img {
+    width: 32px;
+}
+
 
 /* --------------- DASHBOARD ---------------- */
 

@@ -1,0 +1,52 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    width: 306px;
+    margin: 50px auto;
+}
+
+.cell {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px #333333;
+    border: 10x solid #333333;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 60px;
+}
+
+.contenedor {
+    display: grid;
+}
+
+.contador {
+    grid-column: 1;
+}
+
+.juego {
+    grid-column: 2/4;
+}
+
+.der--tabla{
+    font-size: 30px;
+    grid-column: 1;
+}
+
+.izq--tabla{
+    font-size: 30px;
+    grid-column: 2;
+}

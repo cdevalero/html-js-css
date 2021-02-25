@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: flex;
+    background: url(img/feet-4.jpg) no-repeat center center/cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+strong {
+    color: #FF7700;
+}
+
+/*------------------------ STICKY ------------------------*/
+
+/*------------------------ BANNER ------------------------*/
+
+.quote--container{
+    height: 450px;
+}
+
+.banner{
+    display: flex;
+    position:sticky;
+    top:0.001px;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 3px solid rgba(255, 255, 255, 0.489);
+    width: 150px;
+    height: 100vh;
+
+}
+
+.banner--tittle {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.banner--botton {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.banner--botton a{
+    color: white;
+}
+
+.banner--botton a:hover{
+    color: #FF7700;
+}
+
+.main--menu{
+    display: none;
+}
+
+/*------------------------ PAG ------------------------*/
+
+.pag {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*------------------------ NAV ------------------------*/
+
+.logo{
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content:flex-end;
+    margin: 2rem 4rem;
+    
+}
+
+.nav--buttons {
+    padding-right: 2rem;
+    
+}
+
+.nav--buttons a {
+    margin: 0 2rem;
+    padding-bottom: 0.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.nav--buttons a:hover{
+    border-bottom: 3px solid #FF7700;
+}
+
+.nav--search a {
+    color: #ff77009e;
+    font-weight: bold;
+}
+
+.nav--search a:hover {
+    color: #FF7700;
+    font-weight: bold;
+}
+
+/*------------------------ BURGER ------------------------*/
+
+.nav--burger{
+    display: none;
+
+}
+
+/*------------------------ QUOTE ------------------------*/
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    width: 40vw;
+    max-width: 30rem;
+    color: white;
+}
+
+.quote h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.quote span{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+/*------------------------ INFORMATION ------------------------*/
+
+.information {
+    display: flex;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.5rem);
+    width: 100%;
+    height: 160px;
+    color: white;
+}
+
+.events {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.events--card{
+    margin: 0.5rem 0;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    display: flex;
+    gap: 5rem;
+}
+
+.events--title {
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+}
+
+.events--card {
+    font-size: 0.8rem;
+}
+
+.event--title{
+    color: rgba(255, 255, 255, 0.598);
+    padding-bottom: 0.3rem;
+}
+
+.events--dot {
+    font-size: 0.3rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    letter-spacing: 0.3rem;
+}
+
+/*------------------------ NEWS ------------------------*/
+
+.news {
+    display: flex;
+    flex: 1;
+}
+
+.news--img img{
+    width: 160px;
+}
+
+.new--title {
+    margin-left: 3rem;
+    color: rgba(255, 255, 255, 0.598);
+    padding-bottom: 0.3rem;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.new--reed a{
+    margin-left: 3rem;
+    color: #FF7700;
+}
+
+@media(max-width: 970px){
+    body{
+        background: url(img/portrait-2.jpg) no-repeat center center/cover;
+    }
+    .banner--botton a:hover{
+        color: black;
+    }
+    .logo{
+        display: block;
+        color: white;
+    }
+    .nav{
+        font-size: 1.5rem;
+        justify-content:space-between;
+    }
+    .information{
+        height: auto;
+    }
+    .banner {
+        display: none;
+        height: 100%;
+    }
+    .nav--buttons{
+        display: none;
+    }
+    .banner--tittle{
+        display: none;
+    }
+    .show{
+        background: #FF7700;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        border: 0 solid white;
+        width: 30%;
+    } 
+    .banner--botton{
+        margin-top: 6rem;
+        margin-left: 3rem;
+    }
+    .main--menu{
+        display: block;
+    }
+    .off--menu{
+        display: none;
+    }
+    .events{
+        margin-bottom: 2rem;
+    }
+    .news{
+        margin-left: 3rem;
+        margin-bottom: 1rem;
+        margin-right: 3rem;
+    }
+    .news--img img{
+        width: 200px;
+    }
+    /* =========== BURGER ========== */
+    .nav--burger {
+        z-index: 3;
+        display: inline-block;
+        cursor: pointer;
+        justify-content:first baseline;
+    }
+    .bar1, .bar2, .bar3{
+        width: 30px;
+        height: 5px;
+        background: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change .bar1, .change .bar3 {
+        opacity: 0;
+    }
+
+    .quote--container{
+        height: 450px;
+    }
+    .information{
+        flex-direction: column;
+    }
+    .pag{
+        justify-content: unset;
+    }
+
+
+}
+
+@media(max-width: 500px){
+    .show{
+        width: 100%;
+        font-size: 2rem;
+    } 
+    .quote {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 30%;
+        left: 0%;
+        width: auto;
+        max-width: auto;
+    }
+    
+    .quote h1 {
+        font-size: 4rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .quote span{
+        display: none;
+    }
+    .news{
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    .news--img{
+        display: none;
+    }
+    .information{
+        background-color: black;
+    }
+    .events--card{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .news{
+        margin-left: 0rem;
+    }
+    .new--reed{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
