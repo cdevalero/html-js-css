@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+header{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.pads{
+    width: 100%;
+    display: flex;
+}
+
+/* Esto lo que hace es aplicarle el CSS a todos los div que esten dentro de pads */
+.pads > div {
+    flex: 1;
+    height: 33.33vh;
+    z-index: 2;
+}
+
+.pad1{
+    background: purple;
+}
+.pad2{
+    background: grey;
+}
+.pad3{
+    background: yellow;
+}
+.pad4{
+    background: red;
+}
+.pad5{
+    background: black;
+}
+.pad6{
+    background: blue;
+}
+
+
+@keyframes jump{
+    0%{
+        bottom: 0%;
+        left: 10%;
+    }
+    50%{
+        bottom: 60%;
+        left: 50%;
+    }
+    100%{
+        bottom: 0%;
+        left: 90%;
+    }
+}
+
+.visual > div {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 0%;
+}
