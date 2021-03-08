@@ -7,10 +7,7 @@
 body {
     font-family: 'Lato', sans-serif;
     background: white;
-    height: 1750px;
 }
-
-/* ------------------------------------------------------ HEAD ------------------------------------------------------ */
 
 .head{
     height: 100vh;
@@ -103,12 +100,13 @@ body {
 .foot {
     display: flex;
     justify-content: center;
-    height: 300px;
+    
+    margin-bottom: 5rem;
 }
 
 .foot--container {
     background: rgba(128, 128, 128, 0.612);
-    height: 400px;
+    
     width: 90%;
     border-radius: 10px;
 }
@@ -128,7 +126,6 @@ body {
 
 .foot--tools {
     display: grid;
-    
     width: 90%;
     grid-template-columns: repeat(4, auto);
 
@@ -164,4 +161,67 @@ body {
     height: 60px;
     width: 120px;
     border-radius: 10px;
+}
+
+@media (max-width: 800px){
+    .pages--img{
+        grid-template-columns: repeat(1,auto);
+    }
+    .pages--img img{
+        width: 80vw;
+    }
+    .foot--tools {
+        grid-template-columns: repeat(2, auto);
+
+    }
+    .foot--container{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tool--flex{
+        width: 80%;
+        padding-left: 2rem;
+    }
+    .head--content{
+        flex-direction: column;
+        padding-top: 0rem;
+    }
+    .head--name{
+        text-align: center;
+        justify-content: center;
+    }
+    .head--nav{
+        height: 10vh;
+    }
+
+
+    .head--description--title{
+        padding-top: 5rem;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .head--description--data{
+        width: 100%;
+        font-size: 1.5rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+    .head--description--link a{
+
+        font-size: 2rem;
+        padding-top: 2rem;
+        padding-right: 1.5rem;
+    }
+
+    .head--nav{
+        font-size: 2rem;
+    }
 }

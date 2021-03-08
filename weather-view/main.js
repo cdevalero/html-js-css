@@ -7,8 +7,14 @@ let body = document.querySelector('body');
 let iconTemp = document.querySelector('.icon');
 let today = new Date();
 let time = today.getHours();
-var latitude;
-var longitude;
+let moreInformationButton = document.querySelector('.more--button');
+let expand = document.querySelector('.expand');
+let menuExpand = false;
+
+
+let latitude = null;
+let longitude = null;
+let ipClient = null;
 
 async function findIp(url) {
     const res = await fetch(url);
@@ -23,7 +29,7 @@ function getClientPosition(position) {
     fetch(api).then(response => {
         return response.json()
     }).then(data => {
-        console.log(data);
+        //console.log(data);
         const { temp_c } = data.current;
         const { icon, text } = data.current.condition;
         const { tz_id } = data.location;
@@ -55,6 +61,7 @@ function getClientPosition(position) {
 
 function geoAlternativeIp(position) {
     findIp("https://api.ipdata.co?api-key=54d1b4b585a368a01e8ae452579a8d64a87d21a95264e17142a95c70").then(address => {
+        ipClient = address.ip;
         const api = "http://api.weatherapi.com/v1/current.json?key=10b25c61254b42369dc31244210103&q=" + address.ip + "&aqi=no";
         fetch(api).then(response => {
             return response.json()
@@ -93,16 +100,16 @@ window.addEventListener('load', () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => getClientPosition(position), position => geoAlternativeIp(position));
     }
+    
 });
 
 degreedContainer.addEventListener('click', () => {
-    navigator.geolocation.getCurrentPosition(position => {
-        latitude = position.coords.latitude;
-        longitude = position.coords.longitude;
+    if (ipClient == null){
         const api = 'http://api.weatherapi.com/v1/forecast.json?key=10b25c61254b42369dc31244210103&q=' + latitude + ',' + longitude + '&days=1&aqi=no&alerts=no';
         fetch(api).then(response => {
             return response.json()
-        }).then(data => {
+        })
+        .then(data => {
             const { temp_c } = data.current;
             const { temp_f } = data.current;
             if (simbol.textContent == '°C') {
@@ -114,12 +121,14 @@ degreedContainer.addEventListener('click', () => {
                 degreed.textContent = temp_c;
             }
         });
-    }, position => {
+    }
+    else{
         findIp("https://api.ipdata.co?api-key=54d1b4b585a368a01e8ae452579a8d64a87d21a95264e17142a95c70").then(address => {
             const api = "http://api.weatherapi.com/v1/current.json?key=10b25c61254b42369dc31244210103&q=" + address.ip + "&aqi=no";
             fetch(api).then(response => {
                 return response.json()
-            }).then(data => {
+            })
+            .then(data => {
                 const { temp_c } = data.current;
                 const { temp_f } = data.current;
                 if (simbol.textContent == '°C') {
@@ -132,5 +141,26 @@ degreedContainer.addEventListener('click', () => {
                 }
             });
         });
-    });
+    }
 });
+
+/*moreInformationButton.addEventListener('click', () =>{
+    if(menuExpand == false){
+        degreedContainer.style.display = 'none';
+        timezone.style.display = 'none';
+        iconTemp.style.display = 'none';
+        description.style.display = 'none';
+        expand.style.display = 'block';
+        moreInformationButton.textContent = '-';
+        menuExpand = true;
+    }
+    else{
+        degreedContainer.style.display = 'flex';
+        timezone.style.display = 'block';
+        iconTemp.style.display = 'block';
+        description.style.display = 'block';
+        expand.style.display = 'none';
+        moreInformationButton.textContent = '+';
+        menuExpand = false;
+    }
+});*/

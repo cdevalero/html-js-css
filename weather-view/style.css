@@ -49,6 +49,67 @@ body {
     display: none;
 }
 
+.autor{
+    font-size: 1rem;
+    padding-top: 30vh;
+}
+
+.autor a{
+    color: white;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------- MORE ---------------------------------------------------------------*/
+
+
+/*.more--button{
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255,0.7), 
+        rgba(255,255,255,0.3)
+    );
+    backdrop-filter: blur(1.5rem);
+    margin-top: 3rem;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+}*/
+
+/*--------------------------------------------------- EXPAND ---------------------------------------------------------------*/
+
+.expand{
+
+    font-family: sans-serif;
+    color: white;
+    
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255,0.7), 
+        rgba(255,255,255,0.3)
+    );
+    backdrop-filter: blur(1.5rem);
+    
+    width: 100%;
+    
+}
+
+.expand--day{
+    padding: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.expand--day h6{
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/*--------------------------------------------------- MOBILE ---------------------------------------------------------------*/
+
 @media(max-width: 850px){
     .location{
         flex-direction: column-reverse;
