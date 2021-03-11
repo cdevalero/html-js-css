@@ -1,227 +1,208 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: 0;
 }
 
-body {
+body{
     font-family: 'Lato', sans-serif;
-    background: white;
 }
 
-.head{
+/*------------------------------------------------ COVER NAME ------------------------------------------------*/
+
+.cover--name{
+    background: black;
     height: 100vh;
     width: 100%;
-    background: rgb(8,8,8);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.head a{
-    color: white;
-}
-
-.head--nav {
+.contact{
     height: 20vh;
-    width: 80%;
+    
+    padding-right: 2rem;
+
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-    padding-right: 6rem;
-    gap: 3rem;
-    font-size: 1.2rem;
+    gap: 2rem;
 }
 
-.head--content{
-    padding-top: 3rem;
-    height: 50vh;
-    width: 80%;
-    display: flex;
-    gap: 5%;
-    
+.contact a{
+    color: white;
+    font-size: 1.3rem;
 }
 
-.head--name{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    background: url() no-repeat center center/cover;
-    font-size: 2rem;
-    text-align:right;
-    justify-content: flex-end;
-}
+.name--description{
+    height: 60vh;
+    width: 100%;
 
-.head--description{
-    flex: 1;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    text-align: left;
-}
-
-.head--description--title{
-    font-size: 1.2rem;
-}
-
-.head--description--data{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 320px;
-}
-
-.head--description--link a{
-    font-size: 1.2rem;
-    padding-right: 1.5rem;
-}
-
-.pages{
-    transform:translateY(-100px);
-    display: flex;
-    justify-content:center;
-}
-
-.pages--img{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-}
-
-.pages--img img{
-    margin: 1rem 1rem;
-    width: 40vw;
-    box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.523);
-}
-
-.foot {
-    display: flex;
-    justify-content: center;
-    
-    margin-bottom: 5rem;
-}
-
-.foot--container {
-    background: rgba(128, 128, 128, 0.612);
-    
-    width: 90%;
-    border-radius: 10px;
-}
-
-.foot--container h1{
-    padding-top: 2rem;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-    font-weight: 400;
-}
-
-.tool--flex{
-    display: flex;
-    align-items: center;
-    justify-content:flex-end;
-}
-
-.foot--tools {
-    display: grid;
-    width: 90%;
-    grid-template-columns: repeat(4, auto);
-
-}
-
-.foot--tools img{
-    padding-bottom: 1rem;
-    width: 120px;
-}
-
-.telefono{
-    background: darkgray;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 30%;
-    left: 37%;
-    z-index: 2;
-    border-radius: 5px;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+
+}
+
+.name{
+    text-align: center;
+    border-bottom: solid 2px white;
+}
+.name h1{
+    font-size: 3rem;
+}
+
+.content--descrition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titles{
+    text-align: center;
+}
+.titles h2{
+    padding-bottom: 0.8rem;
+}
+
+.description{
     display: none;
 }
 
-.telefono h1{
-
+.links{
+    margin-top: 1rem;
 }
 
-.copy{
-    background-color: red;
-    height: 60px;
-    width: 120px;
-    border-radius: 10px;
+.links a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding-right: 1.3rem;
+    padding-left: 1.3rem;
 }
 
-@media (max-width: 800px){
-    .pages--img{
-        grid-template-columns: repeat(1,auto);
-    }
-    .pages--img img{
-        width: 80vw;
-    }
-    .foot--tools {
-        grid-template-columns: repeat(2, auto);
+/*------------------------------------------------ COVER JOBS ------------------------------------------------*/
 
+.cover--jobs{
+    background: darkgray;
+    width: 100%;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform:translateY(-100px);
+    gap: 2rem;
+}
+
+.card{
+    box-shadow: 2px 2px 20px black;
+}
+
+.card img{
+    width: 300px;
+    height: 200px;
+}
+
+/*------------------------------------------------ TOOLS ------------------------------------------------*/
+
+.tools{
+    padding-top: 20px;
+    text-align: center;
+    background: #48D1CC;
+}
+
+.tools h2{
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tool{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-items: center;
+}
+.tool img{
+    width: 140px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/*------------------------------------------------ TOOLS ------------------------------------------------*/
+
+footer{
+    background: darkgray;
+}
+
+.madeby{
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.madeby a{
+    color: black;
+    text-decoration: none;
+}
+
+/*------------------------------------------------ MEDIA ------------------------------------------------*/
+
+@media (min-width: 800px){
+
+    /*- COVER NAME -- MEDIA -*/
+    .name--description{
+        flex-direction: row;
     }
-    .foot--container{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .content--descrition{
+        max-width: 300px;
+        align-items: flex-start;
     }
-    .tool--flex{
-        width: 80%;
-        padding-left: 2rem;
+    .titles{
+        text-align: left;
+        padding-bottom: 0.8rem;
     }
-    .head--content{
-        flex-direction: column;
-        padding-top: 0rem;
+    .titles h2{
+        font-size: 1.2rem;
+        padding-bottom: 0.3rem;
     }
-    .head--name{
-        text-align: center;
-        justify-content: center;
+    .description{
+        display: block;
     }
-    .head--nav{
-        height: 10vh;
+    .description h3{
+       font-size: 1rem;
+    }
+    
+    .links{
+        margin-top: 1rem;
+    }
+    
+    .links a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.3rem;
+        padding-left: 0rem;
     }
 
-
-    .head--description--title{
-        padding-top: 5rem;
-        font-size: 1.8rem;
-        text-align: center;
+    /*- COVER JOBS -- MEDIA -*/
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        justify-items: center;
+        transform:translateY(-100px);
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+    .card img{
+        width: 40vw;
+        height: 40vh;
     }
 
-    .head--description--data{
-        width: 100%;
-        font-size: 1.5rem;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        display: flex;
-        flex-direction: column;
-        
-        
+    /*- TOOLS -- MEDIA -*/
+    .tool{
+        grid-template-columns: repeat(4,auto);
     }
 
-    .head--description--link a{
-
-        font-size: 2rem;
-        padding-top: 2rem;
-        padding-right: 1.5rem;
-    }
-
-    .head--nav{
-        font-size: 2rem;
-    }
 }
