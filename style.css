@@ -92,7 +92,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform:translateY(-100px);
+    transform:translateY(-10vh);
     gap: 2rem;
 }
 
@@ -125,7 +125,7 @@ body{
     justify-items: center;
 }
 .tool img{
-    width: 140px;
+    width: 130px;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -148,9 +148,66 @@ footer{
     text-decoration: none;
 }
 
+/*------------------------------------------------ PHONE_CARD ------------------------------------------------*/
+
+.black{
+    background: rgba(0, 0, 0, 0.712);
+    backdrop-filter: blur(0.5rem);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    display: none;
+}
+
+.phone--card, .email--card{
+    background: rgba(116, 110, 110, 0.733);
+    backdrop-filter: blur(0.5rem);
+
+    position: absolute;
+    top:33.33vh;
+    left: 5vw;
+    
+    height: 33.33vh;
+    width: 90%;
+    
+    border-radius: 10px;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.phone--card--content, .email--card--content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.phone--card--content h3{
+    font-size: 2.5rem;
+}
+.email--card--content h3{
+    font-size: 2.2rem;
+}
+
+.button--card, .button--card--email{
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.5rem);
+    width: 150px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.5rem 0rem;
+    cursor: pointer;
+}
+
+
 /*------------------------------------------------ MEDIA ------------------------------------------------*/
 
-@media (min-width: 800px){
+@media (min-width: 900px){
 
     /*- COVER NAME -- MEDIA -*/
     .name--description{
@@ -191,7 +248,6 @@ footer{
         display: grid;
         grid-template-columns: repeat(2,auto);
         justify-items: center;
-        transform:translateY(-100px);
         margin-right: 2rem;
         margin-left: 2rem;
     }
@@ -205,4 +261,14 @@ footer{
         grid-template-columns: repeat(4,auto);
     }
 
+
+    .phone--card{
+        top:33.33vh;
+        left: 33.33vw;
+        height: 33.33vh;
+        width: 33.33vw;
+    }
+    .button--card{
+        width: 11.11vw;
+    }
 }
