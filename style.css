@@ -130,7 +130,7 @@ body{
     margin-bottom: 1.5rem;
 }
 
-/*------------------------------------------------ TOOLS ------------------------------------------------*/
+/*------------------------------------------------ FOOTER ------------------------------------------------*/
 
 footer{
     background: darkgray;
@@ -148,7 +148,7 @@ footer{
     text-decoration: none;
 }
 
-/*------------------------------------------------ PHONE_CARD ------------------------------------------------*/
+/*------------------------------------------------ PHONE_CARD/EMAIL ------------------------------------------------*/
 
 .black{
     background: rgba(0, 0, 0, 0.712);
@@ -164,13 +164,14 @@ footer{
     background: rgba(116, 110, 110, 0.733);
     backdrop-filter: blur(0.5rem);
 
-    position: absolute;
+    position: fixed;
+    
     top:33.33vh;
     left: 5vw;
     
     height: 33.33vh;
     width: 90%;
-    
+
     border-radius: 10px;
     display: none;
     align-content: center;

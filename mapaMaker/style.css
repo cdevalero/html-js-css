@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1400px;
+    width: 100%;
+    min-width: 1250px;
+    background-color: black;
+}
+
+.map{
+    height: 1200px;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.map div{
+    height: 30px;
+    width: 30px;
+    
+}
+
+.madeby{
+    color: white;
+}
+
+.madeby a{
+    color: white;
+    text-decoration: none;
+}
